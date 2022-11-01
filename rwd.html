@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+</head>
+<body>
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Hotel</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">Mail</div>
+    <div class="w3-center w3-padding-16">Hotel</div>
+  </div>
+</div>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2021/01/The-Taj-Mahal-Palace-Mumbai.jpg" alt="Sandwich" style="width:100%">
+      <h3>Taj Hotels</h3>
+      <p>Taj Hotels is a chain of luxury hotels and a subsidiary of the Indian Hotels Company Limited, headquartered in Mumbai, India.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="data:image/jpeg;base64,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" alt="Steak" style="width:100%">
+      <h3>Taj Lake Palace Udaipur</h3>
+      <p>Lake Palace (formally known as Jag Niwas) is a former summer palace of the royal dynasty of Mewar, it is now turned into a hotel. .</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://imgcld.yatra.com/ytimages/image/upload/t_seo_Hotel_w_930_h_550_c_fill_g_auto_q_40_f_jpg/v1430903499/Domestic%20Hotels/Hotels_Udaipur/The%20Leela%20Palace%20Udaipur/exterior_dusk.jpg" alt="Cherries" style="width:100%">
+      <h3>The Leela Palace Udaipur</h3>
+      <p>The Leela Palace Udaipur. Luxuriate in this modern palace that makes the most of its lakeside location and views of the rolling Aravalli mountain ranges.</p>
+     
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-amarvilas-agra/experiences/detail/dine-under-the-stars.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3>The Oberoi Amarvilas Agra</h3>
+      <p>Located just 600 metres from the Taj Mahal, the world's most exquisite testimony to undying love, it is easy to rekindle romance at The Oberoi Amarvilas.</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Umaid_Bhavan/images/16x7/33397244.jpg" alt="Popsicle" style="width:100%">
+      <h3>Umaid Bhawan Palace Jodhpur</h3>
+      <p>Built between 1928 and 1943, Umaid Bhawan Palace is a magnificent piece of Rajasthan's heritage, and a symbol of new Jodhpur.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max300/5648061.jpg?k=4629f919fb92436c3e19b71734d208d8e58201df7b29773f90089639f367db6d&o=&hp=1" alt="Salmon" style="width:100%">
+      <h3>The Leela Palace New Delhi</h3>
+      <p>Capital's only modern palace 5 star hotel, The Leela Palace in Chanakyapuri, New Delhi offers luxury rooms, restaurants & meeting halls for business.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-gurgaon/overview/tinified-(1)/togn-exterieor-night.jpg?w=724&hash=e2e92222cf216b1cda09a9396d7e88dd" alt="Sandwich" style="width:100%">
+      <h3>The Oberoi Gurgaon</h3>
+      <p>The Oberoi, Gurgaon is a five star hotel, a 36421.7 square metres urban sanctuary and a striking example of contemporary design.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/a5/b5/d6/exterior.jpg" alt="Croissant" style="width:100%">
+      <h3>Trident Gurgaon</h3>
+      <p>Trident, Gurgaon ranks amongst the best hotels in Gurgaon, Delhi NCR. Trident, Gurgaon features gardens, courtyards and reflection pools, lending it a resort.</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Hotel, <br>The Most Famous Hotel</h3><br>
+    <img src="https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/a7678da8.jpg?impolicy=resizecrop&rw=670&ra=fit" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>Taj Mahal Place Mumbai</b></h4>
+    
+      <h6><i>A Hotel ,with Real Classic Structures</i></h6>
+      <p>The Taj Mahal Palace continues to be a symbol of grandeur and is considered one of the finest hotels in the world. But above all, it is the people and legendary hospitality that makes up the heart and soul of this heritage hotel!
+
+        So the next time you are in Mumbai, join us on a heritage walk to explore a bit of art and history, have a meal at one of our nine acclaimed restaurants or better still, soak it all in with a luxurious stay.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>Service</h3>
+      <p>What is hotel service in hotel?
+        Hotel service means renting of rooms, houses, or lodges for a fee, including all services offered at the hotel, but not limited to business centre, massage shop, swimming pool, laundry, etc.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">rwd.html</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="https://media.easemytrip.com/media/Blog/India/637073414728587272/637073414728587272JmzX5d.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Hotels in India</span><br>
+          <span>Famous Hotels with Description.</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="https://www.lemontreehotels.com/CMSWebParts/LTWebParts/citysearchgallery.ashx?Gid=151" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Kerala Hotels</span><br>
+          <span>Famous Hotels In Kerala</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">India</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Break Fast</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tradition</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Lunch</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Room</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Furnitures</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Pool</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Beach</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

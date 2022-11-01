@@ -1,0 +1,24 @@
+body{
+    background-color: bisque;
+    color:black;
+}
+@media screen and (max-width:1100px) {
+    body{
+    background-color:yellow ;
+    color:red;
+    }
+}
+@media screen and (max-width:900px) {
+    body{
+    background-color:blue ;
+    color:black;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body{
+    background-color:blue ;
+    color:aquamarine;
+    }
+    
+}
